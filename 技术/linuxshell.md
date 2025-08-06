@@ -1,15 +1,10 @@
 # 关于 Linux shell 你必须知道的技巧
 
-<p align='center'>
-<a href="https://github.com/labuladong/fucking-algorithm" target="view_window"><img alt="GitHub" src="https://img.shields.io/github/stars/labuladong/fucking-algorithm?label=Stars&style=flat-square&logo=GitHub"></a>
-<a href="https://labuladong.online/algo/" target="_blank"><img class="my_header_icon" src="https://img.shields.io/static/v1?label=精品课程&message=查看&color=pink&style=flat"></a>
-<a href="https://www.zhihu.com/people/labuladong"><img src="https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E-@labuladong-000000.svg?style=flat-square&logo=Zhihu"></a>
-<a href="https://space.bilibili.com/14089380"><img src="https://img.shields.io/badge/B站-@labuladong-000000.svg?style=flat-square&logo=Bilibili"></a>
-</p>
 
-![](https://labuladong.github.io/pictures/souyisou1.png)
 
-**通知：算法可视化编辑器上线，[点击体验](https://labuladong.online/algo/intro/visualize/)！另外，建议你在我的 [网站](https://labuladong.online/algo/) 学习文章，体验更好。**
+![](https://labuladong.online/algo/images/souyisou1.png)
+
+**通知：为满足广大读者的需求，网站上架 [速成目录](https://labuladong.online/algo/intro/quick-learning-plan/)，如有需要可以看下，谢谢大家的支持~另外，建议你在我的 [网站](https://labuladong.online/algo/) 学习文章，体验更好。**
 
 
 
@@ -115,7 +110,7 @@ $ nohup some_cmd &
 
 shell 的行为可以测试，使用`set -x`命令，会开启 shell 的命令回显，你可以通过回显观察 shell 到底在执行什么命令：
 
-![](https://labuladong.github.io/pictures/linuxshell/1.png)
+![](https://labuladong.online/algo/images/linuxshell/1.png)
 
 可见 `echo $(cmd)` 和 `echo "$(cmd)"`，结果差不多，但是仍然有区别。注意观察，双引号转义完成的结果会自动增加单引号，而前者不会。
 
@@ -182,10 +177,12 @@ $ mv *.{c,cpp} src/
 ```shell
 $ pwd
 /very/long/path
-$ cd # 回到家目录瞅瞅
+# 回到家目录瞅瞅
+$ cd
 $ pwd
 /home/labuladong
-$ cd - # 再返回刚才那个目录
+# 再返回刚才那个目录
+$ cd -
 $ pwd
 /very/long/path
 ```
@@ -267,9 +264,7 @@ $ history | grep 'config'
  7352  ./configure
  7434  git config --global --unset https.proxy
  9609  ifconfig
- 9985  clip -o | sed -z 's/
-/,
-/g' | clip
+ 9985  clip -o | sed -z 's/\n/,\n/g' | clip
 10433  cd ~/.config
 ```
 你使用的所有 shell 命令都会被记录，前面的数字就表示这是第几个命令，找到你想重复使用的命令后，也不需要复制粘贴该命令，**只要使用 `!` + 你想重用的命令编号即可运行该命令**。
@@ -360,8 +355,6 @@ tail | grep '下一篇' $filename
 
 **＿＿＿＿＿＿＿＿＿＿＿＿＿**
 
-**《labuladong 的算法笔记》已经出版，关注公众号查看详情；后台回复「**全家桶**」可下载配套 PDF 和刷题全家桶**：
 
-![](https://labuladong.github.io/pictures/souyisou2.png)
 
-======其他语言代码======
+![](https://labuladong.online/algo/images/souyisou2.png)
